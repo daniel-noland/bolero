@@ -13,7 +13,7 @@ const MAKE_COMMAND: &str = "make";
     target_os = "openbsd",
     target_os = "netbsd"
 ))]
-const MAKE_COMMAND: &str = "gmake";
+const MAKE_COMMAND: &str = "make";
 
 fn build(target: &str, file: &str, lib: &str) -> String {
     let out_dir = env::var("OUT_DIR").unwrap();
