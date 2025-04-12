@@ -228,7 +228,7 @@ void arch_bfdDisasm(pid_t pid, uint8_t* mem, size_t size, char* instr) {
     }
 
     struct disassemble_info info;
-    init_disassemble_info(&info, instr, arch_bfdFPrintF);
+    init_disassemble_info(&info, instr, arch_bfdFPrintF, NULL);
     info.arch          = bfd_get_arch(bfdh);
     info.mach          = bfd_get_mach(bfdh);
     info.buffer        = mem;
